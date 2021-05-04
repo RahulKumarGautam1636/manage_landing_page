@@ -115,7 +115,7 @@ html {
     line-height: 6rem;
     color: hsl(228, 39%, 23%);
   }
-  .left_inner_container p {
+  .info {
     font-size: 1.6rem;
     width: 38rem;
     line-height: 2.5rem;
@@ -136,7 +136,63 @@ html {
     width: 100%;
     height: auto;
   }
-
+/* =====================page_two=========================================== */
+.page_two {
+  margin-top: 12rem;
+  height: 70rem;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  background-image: url(images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: -64% 30rem;;
+  background-size: 53% 78%;;
+}
+/* .page_two * {border: 1px solid red;} */
+.left_two, .right_two {
+  height: 80%;
+  width: 40%;
+}
+.manage {
+  font-size: 4.3rem;
+  width: 49rem;
+  line-height: 6rem;
+  color: hsl(228, 39%, 23%);
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+.child {
+  height: 33.33%;
+  display: flex;
+}
+.number_container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.number {
+  height: 3.5rem;
+  width: 6rem;
+  background: hsl(12, 88%, 59%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  padding-bottom: 0.4rem;
+}
+.number h2 {
+  color: white;
+}
+#list {
+  width: auto;
+}
+.head h1 {
+  margin-bottom: 2rem;
+}
+.head {
+  width: 80%;
+}
 
 @media only screen and (max-width: 1200px) {
   html {
@@ -223,7 +279,7 @@ html {
     font-size: 5rem;
     width: 41rem;
   }
-  .left_inner_container p {
+  .info {
     font-size: 2rem;
     line-height: 3.3rem;
     margin: 4rem 0 4rem 0;
@@ -232,6 +288,64 @@ html {
   .right_inner_container {
     width: 91%;
   }
+/* ================page_two=================================================== */
+.page_two {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+.left_two, .right_two {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left_two {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.manage {
+  width: 37rem;
+  margin: 0;
+}
+.info {
+  1rem 0 1rem 0;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 0 0 2rem;
+  width: 100%;
+  max-width: 46rem;
+  margin-bottom: 4rem;
+}
+.number_container {
+  background: hsl(12, 88%, 89%);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+.number {
+  height: 4rem;
+  width: 7rem;
+}
+.head {
+  width: 100%;
+}
+.head h1 {
+    margin: -3.7rem 0 0 10rem;
+}
+#list {
+  width: auto;
+}
+
+
 }
   @media only screen and (max-width: 450px) {
     html {
