@@ -70,8 +70,8 @@ html {
   flex-direction: column;
   background: transparent;
   box-shadow: none;
-  width: 37%;
-  min-width: 43rem;
+  width: 100%;
+  /* min-width: 43rem; */
 }
 /* ===========================page_one========================================*/
   /* .page_one * {border: 1px solid red;} */
@@ -237,6 +237,9 @@ html {
 .profile_container img {
   width: 8rem;
 }
+.profile_container h2 {
+  color: hsl(228, 39%, 23%);
+}
 #profile_text {
   font-size: 1.4rem;
   width: 42rem;
@@ -343,6 +346,21 @@ html {
 #copy_two {
   display: none;
 }
+.dots_container {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 40% 6rem 40%;
+  display: none;
+}
+.dot {
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 2px solid hsl(12, 88%, 59%);
+  border-radius: 50px;
+}
+.dotBackground {
+  background: hsl(12, 88%, 59%);
+}
 
 @media only screen and (max-width: 1290px) {
   html {
@@ -389,7 +407,7 @@ html {
     justify-content: space-around;
     align-items: center;
     opacity: 0;
-    min-width: 90%;
+    width: 85%;
     height: 0;
     border-radius: 5px;
     flex-direction: column;
@@ -495,19 +513,22 @@ html {
 }
 .middle_container {
   height: auto;
-  flex-direction: column;
+  flex-direction: row;
+  overflow: hidden;
 }
 .top_container {
-  margin-bottom: 5rem;
+  margin: 2rem 0 7rem 0;
 }
 .profile_container {
   width: 100%;
+  transition: 0.5s linear;
 }
 #profile_text {
   font-size: 2rem;
+  width: 39rem;
 }
 .profile_container h2 {
-  margin: 3rem 0 -1.5rem 0;
+  margin: 4rem 0 -0.8rem 0;
 }
 .simplify {
   height: 45rem;
@@ -515,6 +536,7 @@ html {
   justify-content: space-evenly;
   padding: 0;
   text-align: center;
+  margin-top: 0;
 }
 #simplify_text {
   width: 39rem;
@@ -568,15 +590,23 @@ html {
   font-size: 1.5rem;
 }
 .searchBar_container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .searchBar {
   width: 70%;
 }
 .footer_links a {
-    font-size: 2rem;
+  font-size: 2rem;
+}
+.hideItem {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.dots_container {
+  display: flex;
 }
 
 
