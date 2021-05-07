@@ -13,7 +13,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 11% 0 11%;
+  padding: 0 10% 0 10%;
 }
 .logo_container {
   width: 15%;
@@ -51,7 +51,7 @@ html {
   display: block;
 }
 .invite_button_container:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: 0 3px 15px 0 hsl(12, 88%, 59%);
 }
 .open_menu {
   display: none;
@@ -184,7 +184,7 @@ html {
 }
 /* =====================page_three=========================================== */
 .page_three {
-  height: 60rem;
+  height: 63rem;
   width: 100%;
   margin-top: -21rem;
 }
@@ -194,6 +194,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.top_container {
+  padding-bottom: 3rem;
 }
 .middle_container {
   height: 60%;
@@ -220,7 +223,7 @@ html {
 .profile_container h2 {
   color: hsl(228, 39%, 23%);
 }
-.profile_four {
+.profile_4 {
   display: none;
 }
 #profile_text {
@@ -392,7 +395,7 @@ html {
   }
   .navbar_container {
     flex-direction: column;
-    padding: 0;
+    padding: 0 1rem 0 1rem;
   }
   #navlinks_container {
     height: 39rem;
@@ -434,6 +437,10 @@ html {
   }
   .left {
     padding-top: 5rem;
+    background-image: url(images/bg-tablet-pattern.svg);
+    background-position: 28rem -1rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
   .right {
     padding-top: 15rem;
@@ -525,7 +532,7 @@ html {
   width: 100%;
   transition: 0.5s linear;
 }
-.profile_four {
+.profile_4 {
   display: flex;
 }
 #profile_text {
