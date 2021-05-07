@@ -5,7 +5,6 @@ body {
 html {
   font-size: 62.5%;
 }
-/* .navbar_container * {border: 1px solid red;} */
 .navbar_container {
   width: 100%;
   position: absolute;
@@ -14,8 +13,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 3rem 0 3rem;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+  padding: 0 11% 0 11%;
 }
 .logo_container {
   width: 15%;
@@ -24,10 +22,10 @@ html {
   align-items: center;
 }
 .navlinks {
-  display: flex;
   display: inherit;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 2rem;
+  width: 75%;
 }
 .navlinks a {
   text-decoration: none;
@@ -53,9 +51,7 @@ html {
   display: block;
 }
 .invite_button_container:hover {
-  /* background: linear-gradient(to right, hsl(192, 70%, 51%), hsl(136, 65%, 51%)); */
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
-  box-shadow: 0 3px 15px 0 hsl(12, 88%, 59%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .open_menu {
   display: none;
@@ -66,30 +62,24 @@ html {
 #navlinks_container {
   height: auto;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  justify-content: center;
   background: transparent;
   box-shadow: none;
   width: 100%;
-  /* min-width: 43rem; */
 }
 /* ===========================page_one========================================*/
-  /* .page_one * {border: 1px solid red;} */
   .page_one {
     height: 70rem;
     display: flex;
     width: 100%;
     justify-content: center;
-    /* background-color: cyan; */
   }
   .left, .right {
     height: 100%;
-    /* max-width: 62rem; */
     width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /* border: 1px solid black; */
   }
   .right {
     justify-content: flex-start;
@@ -98,16 +88,13 @@ html {
     background-repeat: no-repeat;
   }
   .left_inner_container {
-    /* border: 1px solid black; */
     height: 70%;
-    /* width: 62rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
     padding-bottom: 8rem;
-    /* background-color: red; */
   }
   .left_inner_container h1 {
     font-size: 6rem;
@@ -124,13 +111,11 @@ html {
   }
   .right_inner_container {
     height: 77%;
-    /* width: 62rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
-    /* border: 1px solid red; */
   }
   #intro {
     width: 100%;
@@ -149,7 +134,6 @@ html {
   background-position: -53% 30rem;;
   background-size: 53% 78%;;
 }
-/* .page_two * {border: 1px solid red;} */
 .left_two, .right_two {
   height: 80%;
   width: 40%;
@@ -162,7 +146,6 @@ html {
   font-weight: bolder;
   margin-bottom: 3rem;
 }
-/* .child * {border: 1px solid red;} */
 .child {
   height: 33.33%;
   display: flex;
@@ -202,10 +185,6 @@ html {
   height: 60rem;
   width: 100%;
   margin-top: -21rem;
-  /* padding: 0 1rem 0 1rem; */
-}
-.page_three * {
-  /* border: 1px solid yellow; */
 }
 .top_container, .bottom_container {
   height: 20%;
@@ -231,7 +210,6 @@ html {
   align-items: center;
   flex-direction: column;
   width: 33.33%;
-  /* padding: 0 3rem 0 3rem; */
   text-align: center;
 }
 .profile_container img {
@@ -239,6 +217,9 @@ html {
 }
 .profile_container h2 {
   color: hsl(228, 39%, 23%);
+}
+.profile_four {
+  display: none;
 }
 #profile_text {
   font-size: 1.4rem;
@@ -265,14 +246,13 @@ html {
 }
 /* ========================footer============================================ */
 .footer_container {
-  height: 23rem;
+  height: 25rem;
   width: 100%;
   background: hsl(233, 12%, 13%);
   display: flex;
   justify-content: center;
-  padding: 5rem 0 5rem 0;
+  padding: 6rem 0 6rem 0;
 }
-/* .footer_container * {border: 1px solid red;} */
 .footer_child_one,
 .footer_child_two,
 .footer_child_three {
@@ -353,13 +333,14 @@ html {
   display: none;
 }
 .dot {
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border: 2px solid hsl(12, 88%, 59%);
-  border-radius: 50px;
+  border-radius: 50%;
 }
 .dotBackground {
   background: hsl(12, 88%, 59%);
+  box-shadow: 0 3px 15px 0 hsl(12, 88%, 59%);
 }
 
 @media only screen and (max-width: 1290px) {
@@ -400,6 +381,7 @@ html {
   }
   #navlinks_container {
     height: 39rem;
+    justify-content: flex-start;
   }
   .navlinks {
     background: white;
@@ -411,7 +393,7 @@ html {
     height: 0;
     border-radius: 5px;
     flex-direction: column;
-    transform: translateY(25rem);
+    transform: translateY(24rem);
     transition: 0.5s ease-in-out;
     pointer-events: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -421,6 +403,10 @@ html {
     opacity: 1;
     pointer-events: all;
   }
+  .navlinks a {
+    font-size: 1.8rem;
+  }
+/* =======================page_one============================================ */
   .page_one {
     flex-direction: column-reverse;
     justify-content: center;
@@ -523,9 +509,12 @@ html {
   width: 100%;
   transition: 0.5s linear;
 }
+.profile_four {
+  display: flex;
+}
 #profile_text {
-  font-size: 2.1rem;
-  width: 44rem;
+  font-size: 2rem;
+  width: 39rem;
 }
 .profile_container h2 {
   margin: 4rem 0 -0.8rem 0;
@@ -593,9 +582,15 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: -2rem;
 }
 .searchBar {
-  width: 70%;
+  width: 65%;
+  height: 5.9rem;
+}
+.searchButton {
+  height: 5.9rem;
+  width: 20%;
 }
 .footer_links a {
   font-size: 2rem;
@@ -609,25 +604,24 @@ html {
   display: flex;
 }
 
-
 }
   @media only screen and (max-width: 450px) {
     html {
-      font-size: 55%;
+      font-size: 56%;
     }
   }
   @media only screen and (max-width: 400px) {
     html {
-      font-size: 50%;
+      font-size: 51%;
     }
   }
   @media only screen and (max-width: 365px) {
     html {
-      font-size: 46%;
+      font-size: 49%;
     }
   }
   @media only screen and (max-width: 320px) {
      html {
-       font-size: 40%;
+       font-size: 44%;
      }
   }
