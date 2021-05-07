@@ -55,9 +55,11 @@ html {
 }
 .open_menu {
   display: none;
+  transition: 0.3s linear;
 }
 .close_menu {
   display: none;
+  transition: 0.3s linear;
 }
 #navlinks_container {
   height: auto;
@@ -462,6 +464,7 @@ html {
   height: auto;
   margin-top: 0;
   padding-bottom: 3rem;
+  background-image: none;
 }
 .left_two, .right_two {
   width: 100%;
@@ -539,6 +542,9 @@ html {
   padding: 0;
   text-align: center;
   margin-top: 0;
+  background-image: url(images/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 #simplify_text {
   width: 39rem;
