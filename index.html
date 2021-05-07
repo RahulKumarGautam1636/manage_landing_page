@@ -10,8 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Manage landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
   <div class="navbar_container">
@@ -107,6 +105,8 @@
       <h1 class="what">what they've said</h1>
     </div>
     <div class="middle_container">
+      <img id="turnLeft" src="CSS/images/icon-angle-left.svg" alt="left" onclick="slideRight()">
+      <img id="turnRight" src="CSS/images/icon-angle-right.svg" alt="right" onclick="slideLeft()">
       <div class="profile_container profile_1">
         <img src="CSS/images/avatar-anisha.png" alt="anisha">
         <h2>Anisha Li</h2>
@@ -190,6 +190,7 @@
     Coded by - <span><a href="https://www.frontendmentor.io/profile/RahulKumarGautam1636">Rahul Kumar Gautam</a></span>.</p>
   </div>
 <script>
+// -------------function for navigation bar-------------------------------------
 var open = $(".open_menu");
 var close = $(".close_menu");
 nav_links = $(".navlinks");
@@ -203,18 +204,12 @@ close.click(function() {
   open.removeClass("menu_icon_hide");
   nav_links.removeClass("nav_animation");
 });
-
+// --------------function for slider bar----------------------------------------
     currentBox = 1;
     boxCount = 4;
-$(".profile_container").click(function() {
+function slideLeft() {
   if (window.matchMedia("(max-width: 900px)").matches) {
-  if (currentBox===boxCount) {
-    $(".profile_"+(currentBox)).addClass("hideItem");
-    $(".dot"+currentBox).removeClass("dotBackground");
-    currentBox = 1;
-    $(".profile_"+currentBox).removeClass("hideItem");
-    $(".dot"+currentBox).addClass("dotBackground");
-  } else {
+  if (currentBox!==boxCount) {
     $(".profile_"+currentBox).addClass("hideItem");
     $(".dot"+currentBox).removeClass("dotBackground");
     $(".profile_"+(currentBox+1)).removeClass("hideItem");
@@ -222,17 +217,10 @@ $(".profile_container").click(function() {
     currentBox++
   }
 }
-})
-
-$(".invite_button").click(function() {
+}
+function slideRight() {
   if (window.matchMedia("(max-width: 900px)").matches) {
-  if (currentBox===1) {
-    $(".profile_"+currentBox).addClass("hideItem");
-    $(".dot"+currentBox).removeClass("dotBackground");
-    currentBox = boxCount;
-    $(".profile_"+currentBox).removeClass("hideItem");
-    $(".dot"+currentBox).addClass("dotBackground");
-  } else {
+  if (currentBox!==1) {
     $(".profile_"+currentBox).addClass("hideItem");
     $(".dot"+currentBox).removeClass("dotBackground");
     $(".profile_"+(currentBox-1)).removeClass("hideItem");
@@ -240,7 +228,7 @@ $(".invite_button").click(function() {
     currentBox--
   }
 }
-})
+}
 </script>
 </body>
 </html>
