@@ -126,11 +126,18 @@
         <p id="profile_text" class="info">“Manage allows us to provide structure and process. It keeps us organized
         and focused. I can’t stop recommending them to everyone I talk to!”</p>
       </div>
+      <div class="profile_container profile_four hideItem">
+        <img src="CSS/images/avatar-shanai.png" alt="anisha">
+        <h2>Shanai Gough</h2>
+        <p id="profile_text" class="info">“Their software allows us to track, manage and collaborate on our projects
+        from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+      </div>
     </div>
     <div class="dots_container">
       <div class="dot dOne dotBackground"></div>
       <div class="dot dTwo"></div>
       <div class="dot dThree"></div>
+      <div class="dot dFour"></div>
     </div>
     <div class="bottom_container">
       <div id="getStarted" class="invite_button_container">
@@ -196,9 +203,11 @@ close.click(function() {
 var one = $(".profile_one");
 var two = $(".profile_two");
 var three = $(".profile_three");
+var four = $(".profile_four");
 var dotOne = $(".dOne");
 var dotTwo = $(".dTwo");
 var dotThree = $(".dThree");
+var dotFour = $(".dFour");
 one.click(function() {
   if (window.matchMedia("(max-width: 900px)").matches) {
   one.addClass("hideItem");
@@ -218,8 +227,16 @@ two.click(function() {
 three.click(function() {
   if (window.matchMedia("(max-width: 900px)").matches) {
   three.addClass("hideItem");
-  one.removeClass("hideItem");
+  four.removeClass("hideItem");
   dotThree.removeClass("dotBackground");
+  dotFour.addClass("dotBackground");
+}
+})
+four.click(function() {
+  if (window.matchMedia("(max-width: 900px)").matches) {
+  four.addClass("hideItem");
+  one.removeClass("hideItem");
+  dotFour.removeClass("dotBackground");
   dotOne.addClass("dotBackground");
 }
 })
@@ -227,32 +244,3 @@ three.click(function() {
 </body>
 </html>
 
-<!--
-
-Shanai Gough
-“Their software allows us to track, manage and collaborate on our projects
-from anywhere. It keeps the whole team in-sync without being intrusive.”
-
-Get Started
-
-Simplify how your team works today.
-Get Started
-
-Home
-Pricing
-Products
-About Us
-Careers
-Community
-Privacy Policy
-
-Updates in your inbox…
-Go
-
-Copyright 2020. All Rights Reserved -->
-
-
-<!-- <div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-  Coded by <a href="#">Your Name Here</a>.
-</div> -->
