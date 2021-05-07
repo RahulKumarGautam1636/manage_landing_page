@@ -335,12 +335,25 @@ html {
 .dot {
   height: 1.2rem;
   width: 1.2rem;
-  border: 2px solid hsl(12, 88%, 59%);
+  border: 1px solid hsl(12, 88%, 59%);
   border-radius: 50%;
 }
 .dotBackground {
   background: hsl(12, 88%, 59%);
   box-shadow: 0 3px 15px 0 hsl(12, 88%, 59%);
+}
+.attribution {
+  text-align: center;
+  background: hsl(233, 12%, 13%);
+}
+.attribution a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: hsl(39, 89%, 49%);
+}
+.attribution p {
+  font-size: 1.3rem;
+  color: hsl(189, 59%, 53%);
 }
 
 @media only screen and (max-width: 1290px) {
