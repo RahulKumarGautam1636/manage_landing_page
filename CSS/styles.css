@@ -208,6 +208,11 @@ html {
   color: hsl(228, 39%, 23%);
   font-weight: bolder;
 }
+.profiles_outer_container {
+  display: flex;
+  width: 100%;
+  transition: 0.8s ease-in-out;
+}
 .profile_container {
   height: 100%;
   display: flex;
@@ -222,9 +227,6 @@ html {
 }
 .profile_container h2 {
   color: hsl(228, 39%, 23%);
-}
-.profile_4 {
-  display: none;
 }
 #profile_text {
   font-size: 1.4rem;
@@ -347,7 +349,7 @@ html {
 .dots_container {
   width: 100%;
   justify-content: space-evenly;
-  padding: 0 40% 6rem 40%;
+  padding: 2rem 40% 5rem 40%;
   display: none;
 }
 .dot {
@@ -542,22 +544,25 @@ html {
   margin: 2rem 0 7rem 0;
   padding-bottom: 0;
 }
+.profiles_outer_container {
+  width: auto;
+  transform: translateX(0);
+}
 .profile_container {
-  width: 100%;
-  transition: 0.5s linear;
+  width: 100vw;
 }
 .profile_4 {
   display: flex;
 }
 #profile_text {
   font-size: 2rem;
-  width: 39rem;
 }
 .profile_container h2 {
   margin: 4rem 0 -0.8rem 0;
 }
 #turnLeft, #turnRight {
   display: block;
+  z-index: 2;
 }
 .simplify {
   height: 45rem;
@@ -637,11 +642,6 @@ html {
 }
 .footer_links a {
   font-size: 2rem;
-}
-.hideItem {
-  width: 0;
-  opacity: 0;
-  pointer-events: none;
 }
 .dots_container {
   display: flex;
