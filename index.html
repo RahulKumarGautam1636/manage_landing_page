@@ -107,31 +107,33 @@
     <div class="middle_container">
       <img id="turnLeft" src="CSS/images/icon-angle-left.svg" alt="left" onclick="slideRight()">
       <img id="turnRight" src="CSS/images/icon-angle-right.svg" alt="right" onclick="slideLeft()">
-      <div class="profile_container profile_1">
+      <div class="profiles_outer_container">
+      <div class="profile_container">
         <img src="CSS/images/avatar-anisha.png" alt="anisha">
         <h2>Anisha Li</h2>
         <p id="profile_text" class="info">“Manage has supercharged our team’s workflow. The ability to maintain
         visibility on larger milestones at all times keeps everyone motivated.”</p>
       </div>
-      <div class="profile_container profile_2 hideItem">
+      <div class="profile_container">
         <img src="CSS/images/avatar-ali.png" alt="anisha">
         <h2>Ali Bravo</h2>
         <p id="profile_text" class="info">“We have been able to cancel so many other subscriptions since using
         Manage. There is no more cross-channel confusion and everyone is much
         more focused.”</p>
       </div>
-      <div class="profile_container profile_3 hideItem">
+      <div class="profile_container">
         <img src="CSS/images/avatar-richard.png" alt="anisha">
         <h2>Richard Watts</h2>
         <p id="profile_text" class="info">“Manage allows us to provide structure and process. It keeps us organized
         and focused. I can’t stop recommending them to everyone I talk to!”</p>
       </div>
-      <div class="profile_container profile_4 hideItem">
+      <div class="profile_container">
         <img src="CSS/images/avatar-shanai.png" alt="anisha">
         <h2>Shanai Gough</h2>
         <p id="profile_text" class="info">“Their software allows us to track, manage and collaborate on our projects
         from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
       </div>
+    </div>
     </div>
     <div class="dots_container">
       <div class="dot dot1 dotBackground"></div>
@@ -140,7 +142,7 @@
       <div class="dot dot4"></div>
     </div>
     <div class="bottom_container">
-      <div id="getStarted" class="invite_button_container">
+      <div onclick="slideLeft()" id="getStarted" class="invite_button_container">
         <button  class="invite_button" type="button" name="button">Get Started</button>
       </div>
     </div>
@@ -205,29 +207,41 @@ close.click(function() {
   nav_links.removeClass("nav_animation");
 });
 // --------------function for slider bar----------------------------------------
-    currentBox = 1;
-    boxCount = 4;
+     currentBox = 1;
+     boxCount = 4;
+var  moveBox = $(".profiles_outer_container");
 function slideLeft() {
   if (window.matchMedia("(max-width: 900px)").matches) {
   if (currentBox!==boxCount) {
-    $(".profile_"+currentBox).addClass("hideItem");
-    $(".dot"+currentBox).removeClass("dotBackground");
-    $(".profile_"+(currentBox+1)).removeClass("hideItem");
-    $(".dot"+(currentBox+1)).addClass("dotBackground");
-    currentBox++
+    thisBox = currentBox*(100/boxCount);
+     moveBox.css("transform", "translateX(-"+thisBox+"%)");
+     $(".dot"+currentBox).removeClass("dotBackground");
+     $(".dot"+(currentBox+1)).addClass("dotBackground");
+     currentBox++
   }
 }
 }
 function slideRight() {
   if (window.matchMedia("(max-width: 900px)").matches) {
   if (currentBox!==1) {
-    $(".profile_"+currentBox).addClass("hideItem");
-    $(".dot"+currentBox).removeClass("dotBackground");
-    $(".profile_"+(currentBox-1)).removeClass("hideItem");
-    $(".dot"+(currentBox-1)).addClass("dotBackground");
-    currentBox--
+      moveBox.css("transform", "translateX(-"+(thisBox-25)+"%)");
+      $(".dot"+currentBox).removeClass("dotBackground");
+      $(".dot"+(currentBox-1)).addClass("dotBackground");
+      currentBox--
+      thisBox = thisBox-25;
   }
 }
+}
+// ---function to reset the translateX changes if user switched to desktop mode-
+var x = window.matchMedia("(max-width: 900px)");
+myFunction(x);
+x.addListener(myFunction);
+function myFunction(x) {
+    if (!x.matches) {
+      moveBox.css("transform", "translateX(0)");
+    } else {
+      slideRight();
+    }
 }
 </script>
 </body>
