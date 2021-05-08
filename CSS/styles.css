@@ -1,4 +1,4 @@
-* {margin: 0; padding: 0; box-sizing: border-box;}
+  * {margin: 0; padding: 0; box-sizing: border-box;}
 body {
   font-family: 'Be Vietnam', sans-serif;
 }
@@ -349,7 +349,7 @@ html {
 .dots_container {
   width: 100%;
   justify-content: space-evenly;
-  padding: 2rem 40% 5rem 40%;
+  padding: 3rem 40% 7rem 40%;
   display: none;
 }
 .dot {
@@ -374,6 +374,9 @@ html {
 .attribution p {
   font-size: 1.3rem;
   color: hsl(189, 59%, 53%);
+}
+.hideItem {
+  display: none;
 }
 
 @media only screen and (max-width: 1290px) {
@@ -570,7 +573,7 @@ html {
   justify-content: space-evenly;
   padding: 0;
   text-align: center;
-  margin-top: 0;
+  margin-top: 4rem;
   background-image: url(images/bg-simplify-section-mobile.svg);
   background-repeat: no-repeat;
   background-position: left center;
@@ -645,6 +648,9 @@ html {
 }
 .dots_container {
   display: flex;
+}
+.hideItem {
+  display: flex;  
 }
 
 }
