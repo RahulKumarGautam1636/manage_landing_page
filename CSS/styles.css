@@ -1,4 +1,4 @@
-  * {margin: 0; padding: 0; box-sizing: border-box;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
 body {
   font-family: 'Be Vietnam', sans-serif;
 }
@@ -46,9 +46,6 @@ html {
 }
 .invite_button_container {
   border-radius: 40px;
-}
-#getStarted {
-  display: block;
 }
 .invite_button_container:hover {
   box-shadow: 0 3px 15px 0 hsl(12, 88%, 59%);
@@ -176,7 +173,7 @@ html {
 .number {
   margin-right: 3rem;
 }
-#list {
+.list {
   width: auto;
 }
 .head {
@@ -228,7 +225,7 @@ html {
 .profile_container h2 {
   color: hsl(228, 39%, 23%);
 }
-#profile_text {
+.profile_text {
   font-size: 1.4rem;
   width: 42rem;
 }
@@ -396,6 +393,9 @@ html {
   .invite_button_container {
     display: none;
   }
+  .getStarted {
+    display: block;
+  }
   .logo_container {
     width: 100%;
     padding: 3rem;
@@ -528,7 +528,7 @@ html {
   width: 100%;
   padding-left: 2rem;
 }
-#list {
+.list {
   width: auto;
   margin: 0;
 }
@@ -554,11 +554,9 @@ html {
 .profile_container {
   width: 100vw;
 }
-.profile_4 {
-  display: flex;
-}
-#profile_text {
+.profile_text {
   font-size: 2rem;
+  width: 42rem;
 }
 .profile_container h2 {
   margin: 4rem 0 -0.8rem 0;
@@ -650,7 +648,7 @@ html {
   display: flex;
 }
 .hideItem {
-  display: flex;  
+  display: flex;
 }
 
 }
