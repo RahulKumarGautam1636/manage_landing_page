@@ -314,7 +314,7 @@ html {
 .searchBar_container {
   display: flex;
 }
-.searchBar {
+#searchBar {
   height: 4.5rem;
   width: 25rem;
   background: white;
@@ -633,7 +633,7 @@ html {
   justify-content: center;
   margin-top: -3rem;
 }
-.searchBar {
+#searchBar {
   width: 65%;
   height: 5.5rem;
 }
